@@ -1,13 +1,15 @@
 from langchain_groq import ChatGroq
 from react_graph import AgentGraph
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from logzero import logger
 import streamlit as st
 import os
 import uuid
 
-load_dotenv() 
-os.environ["GROQ_API_KEY"]=os.getenv("GROQ_API_KEY")
+# load_dotenv() 
+# os.environ["GROQ_API_KEY"]=os.getenv("GROQ_API_KEY")
+
+os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
 
 # give title to the page
 st.title('Coffee Sales Chatbot')
